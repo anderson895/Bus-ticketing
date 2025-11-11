@@ -1,59 +1,72 @@
-Bus Ticketing System
+# Bus Ticketing System
 
-This project is a Java Swing-based Bus Ticketing System that uses MySQL for database management. It can be set up and run using NetBeans IDE and XAMPP.
+This is a **Java Swing-based Bus Ticketing System** that uses **MySQL** for data storage. The project can be run using **NetBeans IDE** and **XAMPP** for MySQL management.
 
-Prerequisites
+---
 
-Before starting, make sure you have the following installed:
+## Prerequisites
 
-Java JDK
+Before setting up the project, ensure you have:
 
-NetBeans IDE
+- [Java JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [NetBeans IDE](https://netbeans.apache.org/download/)
+- [XAMPP](https://www.apachefriends.org/index.html) (for Apache and MySQL)
+- MySQL Database (via XAMPP’s phpMyAdmin)
+- MySQL Connector/J (JDBC driver for MySQL)
 
-XAMPP
+---
 
-MySQL Database (via XAMPP’s phpMyAdmin)
+## Project Setup
 
-Project Setup
-1. Clone or Download Project
+### 1. Download or Clone Project
 
-Clone the repository or download the project ZIP.
+1. Clone the repository or download the project ZIP.
+2. Extract the project folder to a preferred location.
 
-Extract the project folder to a convenient location.
+### 2. Open Project in NetBeans
 
-2. Open Project in NetBeans
+1. Launch **NetBeans IDE**.
+2. Go to **File → Open Project**.
+3. Navigate to the extracted project folder.
+4. Select the project and click **Open Project**.
 
-Launch NetBeans IDE.
+### 3. Setup Database
 
-Go to File → Open Project.
-
-Navigate to the project folder and select it.
-
-Click Open Project.
-
-3. Setup Database (XAMPP + phpMyAdmin)
-
-Start XAMPP Control Panel.
-
-Start Apache and MySQL services.
-
-Open phpMyAdmin by visiting http://localhost/phpmyadmin
-.
-
-Create a new database named:
-
-bus_ticketing_db
+1. Open **XAMPP Control Panel**.
+2. Start **Apache** and **MySQL**.
+3. Open **phpMyAdmin** by visiting [http://localhost/phpmyadmin](http://localhost/phpmyadmin).
+4. Create a new database:
 
 
-Import the database structure (if you have a .sql file included) using:
-
-Click Import → Choose File → Go.
 
 
-5. Run Project
 
-Right-click the project in NetBeans → Run.
+5. Import the database structure if a `.sql` file is provided:
 
-The Bus Ticketing System GUI should launch.
+   - Click **Import → Choose File → Go**.
 
-You can now add, update, and view tickets.
+6. If no `.sql` file is provided, create the necessary tables manually. Example:
+
+```sql
+CREATE DATABASE bus_ticketing_db;
+USE bus_ticketing_db;
+
+CREATE TABLE tickets (
+    ticket_id INT AUTO_INCREMENT PRIMARY KEY,
+    passenger_name VARCHAR(100),
+    passenger_type ENUM('Regular', 'Student', 'Senior'),
+    bus_number VARCHAR(20),
+    destination VARCHAR(100),
+    price DOUBLE,
+    discount DOUBLE,
+    total DOUBLE,
+    date_time DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+---
+
+If you want, I can also make a **more visually appealing README** with **screenshots, instructions, and flow diagram** for your Bus Ticketing System project so it looks professional.  
+
+Do you want me to do that?
