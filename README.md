@@ -62,7 +62,7 @@ CREATE TABLE tickets (
     total DOUBLE,
     date_time DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 
 
 ---
