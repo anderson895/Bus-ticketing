@@ -67,6 +67,20 @@ CREATE TABLE tickets (
 
 ---
 
-If you want, I can also make a **more visually appealing README** with **screenshots, instructions, and flow diagram** for your Bus Ticketing System project so it looks professional.  
+5. Add JDBC Driver to Project
 
-Do you want me to do that?
+Download MySQL Connector/J from MySQL Connector/J Download
+.
+
+In NetBeans:
+
+Right-click your project → Properties → Libraries → Add JAR/Folder.
+
+Select the downloaded MySQL Connector/J JAR file.
+
+6. Run Project
+
+Right-click the project → Run.
+
+The Bus Ticketing System GUI should appear.
+
